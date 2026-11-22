@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08201d">
+<title>心の番 · 测试导航台</title>
+<meta name="description" content="心の番内测体验页：五项人格与角色相似度测试，无需卡密，直接进入。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  :root{
+    --ink:#08201d;--ink-2:#0d2c28;--line:rgba(232,238,228,.14);
+    --text:#eef2e8;--muted:rgba(238,242,232,.64);--accent:#d8c48f;--accent-2:#7fc8b2;
+    --serif:"Songti SC","Noto Serif SC","Source Han Serif SC",Georgia,"Times New Roman",serif;
+    --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 15% -10%,#143b34 0%,transparent 60%),radial-gradient(900px 500px at 90% 0%,#1b2540 0%,transparent 55%),var(--ink);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  header{padding:38px 0 18px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;flex-direction:column;gap:6px}
+  .brand h1{margin:0;font-family:var(--serif);font-weight:600;font-size:26px;letter-spacing:.14em}
+  .brand p{margin:0;color:var(--muted);font-size:13px;letter-spacing:.08em}
+  .tag{font-size:12px;letter-spacing:.18em;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+  .intro{margin:10px 0 30px;padding:22px 24px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));backdrop-filter:blur(6px)}
+  .intro h2{margin:0 0 8px;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:.04em}
+  .intro p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}
+  .list{display:grid;grid-template-columns:1fr;gap:18px;padding-bottom:20px}
+  @media(min-width:800px){.list{grid-template-columns:1fr 1fr}}
+  .card{position:relative;display:block;min-height:290px;border-radius:20px;overflow:hidden;text-decoration:none;color:var(--text);border:1px solid var(--line);isolation:isolate;transition:transform .35s ease,box-shadow .35s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 18px 46px rgba(0,0,0,.42)}
+  .card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .6s ease}
+  .card:hover img{transform:scale(1.05)}
+  .card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,20,18,.18) 0%,rgba(6,20,18,.58) 46%,rgba(6,20,18,.94) 100%)}
+  .card-body{position:absolute;left:0;right:0;bottom:0;padding:22px 24px}
+  .card h3{margin:0 0 6px;font-family:var(--serif);font-size:21px;font-weight:600;letter-spacing:.04em}
+  .card .sub{margin:0 0 10px;font-size:13px;color:rgba(238,242,232,.82)}
+  .card .meta{margin:0 0 16px;font-size:12px;letter-spacing:.06em;color:rgba(216,196,143,.9)}
+  .go{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.1em;color:var(--text);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:9px 18px;background:rgba(255,255,255,.06)}
+  .card:hover .go{background:rgba(216,196,143,.18);border-color:rgba(216,196,143,.6)}
+  .note{margin:8px 0 0;color:var(--muted);font-size:12.5px;line-height:1.9}
+  footer{margin-top:26px;padding:26px 0 44px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:12px;top:12px;z-index:5;background:#0d2c28;border:1px solid var(--line);padding:8px 12px;border-radius:8px;color:var(--text)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <h1>心の番</h1>
+      <p>MAJO-MIRROR · 五项探索测试</p>
+    </div>
+    <span class="tag">测试体验版</span>
+  </header>
+
+  <main id="main">
+    <section class="intro">
+      <h2>选一个想看的角度，开始。</h2>
+      <p>这里是内测体验页：打开即玩，不需要卡密。每一项都用日常情境去照见你，结果只代表此刻的一种可能。答案只保存在你自己的浏览器里，换设备不会同步，也不会收集姓名。</p>
+    </section>
+
+    <section class="list" aria-label="测试列表">
+      <a class="card" href="magic/index.html">
+        <img src="castle.jpg" alt="月光照亮湖畔的魔法城堡" loading="lazy">
+        <div class="card-body">
+          <h3>魔法映照</h3>
+          <p class="sub">测测你是《哈利·波特》里的谁</p>
+          <p class="meta">24 题 · 约 3–5 分钟 · 21 位角色</p>
+          <span class="go">开始测试 →</span>
+        </div>
+      </a>
+
+      <a class="card" href="soul-major/index.html">
+        <img src="cover-study.webp" alt="蓝调时刻的宁静图书馆" loading="lazy">
+        <div class="card-body">
+          <h3>灵魂选修课</h3>
+          <p class="sub">测测你灵魂深处最想学的专业</p>
+          <p class="meta">24 题 · 约 4–6 分钟 · 28 个专业方向</p>
+          <span class="go">开始测试 →</span>
+        </div>
+      </a>
+
+      <a class="card" href="idv-survivor/index.html">
+        <img src="cover-survivor.webp" alt="晨雾中的庄园花园与玻璃温室" loading="lazy">
+        <div class="card-body">
+          <h3>庄园回声 · 求生者篇</h3>
+          <p class="sub">你是《第五人格》里的哪位求生者？</p>
+          <p class="meta">40 题 · 约 7–10 分钟 · 40 个匹配画像</p>
+          <span class="go">开始测试 →</span>
+        </div>
+      </a>
+
+      <a class="card" href="idv-hunter/index.html">
+        <img src="cover-hunter.webp" alt="酒红幕帘后的庄园镜厅与烛光" loading="lazy">
+        <div class="card-body">
+          <h3>庄园回声 · 监管者篇</h3>
+          <p class="sub">你是《第五人格》里的哪位监管者？</p>
+          <p class="meta">40 题 · 约 7–10 分钟 · 22 个匹配画像</p>
+          <span class="go">开始测试 →</span>
+        </div>
+      </a>
+
+      <a class="card" href="faerun/index.html">
+        <img src="faerun-cover.png" alt="费伦奇幻世界的手札插画" loading="lazy">
+        <div class="card-body">
+          <h3>费伦生活手札</h3>
+          <p class="sub">在费伦大陆，你生活得更像谁？</p>
+          <p class="meta">22–26 题 · 约 8–12 分钟 · 14 位角色</p>
+          <span class="go">开始测试 →</span>
+        </div>
+      </a>
+    </section>
+
+    <p class="note">全部为同人娱乐测试，不是官方产品，也不构成任何心理学诊断。角色剧照与游戏素材版权归原权利方所有，仅作内测交流，不作商用。</p>
+  </main>
+
+  <footer>
+    <span>心の番 · 内测体验版</span>
+    <span>无需卡密 · 无需注册 · 数据仅存本机</span>
+  </footer>
+</div>
+</body>
+</html>
