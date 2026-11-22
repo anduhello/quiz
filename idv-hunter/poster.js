@@ -17,7 +17,6 @@
   rule(1802);title('03','写给此刻的你',1862);y=1928;for(const q of narrative.quotes.slice(1)){y=lines('「'+q+'」',76,y,925,28,48,2)+13;}
   text('保留你的特点，也给不同的选择留一点空间。',76,2222,25,colors.accent);text('原创结果句，非游戏台词。完整依据与差异说明见测试结果页。',76,2280,21,colors.muted);
   text('娱乐性角色相似探索 · 非官方测试 · 不测能力、善恶或心理健康',76,2333,19,colors.muted);
-  let siteUrl=location.origin+location.pathname;c.font='18px sans-serif';while(c.measureText(siteUrl).width>930&&siteUrl.length>35)siteUrl=siteUrl.slice(0,-2);text(siteUrl,76,2379,18,colors.muted);
   return await new Promise((resolve,reject)=>canvas.toBlob(blob=>blob?resolve(blob):reject(Error('结果图片生成未成功，请重试。')),'image/png'));
  }
  root.ManorPoster={create};
