@@ -34,6 +34,6 @@ const MagicData = (() => {
     ['cho','秋·张','Cho Chang','让敏感成为连接世界的方式','细腻 / 共情 / 自省',[0,3,8,1,1,1],'你会认真感受关系里的变化，也愿意回头理解自己的情绪。对你来说，亲密不是可以轻易跳过的细节。','观察细腻，能发现他人的情绪，愿意认真对待一段关系。','容易反复琢磨尚未得到解释的事情。给情绪空间，也给生活新的支点。','把一个反复盘旋的念头写下，再安排一件具体的小行动。'],
     ['tom','汤姆·里德尔','Tom Riddle','看见局势，也看见选择的代价','谋略 / 掌控 / 野心',[0,3,0,1,10,0],'你的多次选择呈现出清晰的目标意识、信息管理和掌控倾向。这映照了这个虚构人物的策略侧面，不是对你道德或真实人格的判断。','善于谋划，能捕捉资源和关键杠杆，在不确定中争取主动。','当效率压过信任，关系容易变成工具。真正持久的影响力也需要尊重他人的选择。','下一次决策，把受影响的人请进讨论，允许一个不同意你的答案。']
   ];
-  const roles = rows.map(r=>({id:r[0],name:r[1],en:r[2],line:r[3],tags:r[4].split(' / '),profile:mix(r[5]),portrait:r[6],strength:r[7],blind:r[8],tip:r[9],hidden:r[0]==='tom'}));
+  const roles = rows.map(r=>({id:r[0],name:r[1],en:r[2],line:r[3],tags:r[4].split(' / '),profile:mix(r[5]),motiveWeights:r[5],portrait:r[6],strength:r[7],blind:r[8],tip:r[9],hidden:r[0]==='tom'}));
   return {dimensions,questions,roles,critical,version:2};
 })();
