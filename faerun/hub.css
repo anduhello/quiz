@@ -1,7 +1,5 @@
-/* 心の番接入层：保留原测试主题与逻辑，改善手机阅读和返回导航。 */
+/* 心の番接入层：保留原测试主题与逻辑，改善手机阅读。 */
 body{font-size:16px}
-.hub-return{padding:16px 0 0}
-.hub-return a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid #c8ad76;border-radius:8px;color:#f5ecd5;text-decoration:none;font:600 16px/1.5 'Microsoft YaHei','PingFang SC',sans-serif}
 .micro,.intro .micro,.roster,footer,footer button,footer small,.chapter,.unknown,.savehint,.paper .label,.credit,.toast,.caution,.result-summary .micro,.result-summary .label,.motif-tags span,.separation,.villain-note,.report-card .micro,.salience-row,.report-card details,.axis-notes p,.answer-evidence p,.other-character small,.other-character p,.v2-result .all-results summary,.v2-result .mini-result,dialog details,table,.character-tile small,.hero-name>div,.declarations blockquote span{font-size:14px}
 .bw-option p,.choice,.bw-controls button,.report-card p,.insight p,.insight h3,dialog p,dialog li,.secondary,.text{font-size:16px}
 .bw-controls button,.unknown,.text,footer button{min-height:44px}
@@ -13,5 +11,4 @@ body{font-size:16px}
 .salience-row b{font-size:17px}
 .v2-result>.credit a{color:#f5dfad}
 @media(max-width:360px){.frame{padding:0 14px}.paper,.report-card{padding:24px 16px}.salience-row{grid-template-columns:84px minmax(0,1fr) 28px;gap:7px}}
-@media print{.hub-return{display:none}}
 
