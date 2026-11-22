@@ -1,5 +1,6 @@
 const app=document.querySelector('#app'),modal=document.querySelector('#modal');
-const key='soul-major-v1';let state={a:Array(24).fill(null),i:0,done:false};
+const cardId = location.pathname.match(/\/entry\/([a-f0-9-]+)\//)?.[1];
+const key='soul-major-v1'+(cardId ? ':' + cardId : '');let state={a:Array(24).fill(null),i:0,done:false};
 try{const s=JSON.parse(localStorage.getItem(key));if(s&&Array.isArray(s.a)&&s.a.length===24&&s.a.every(v=>v===null||Number.isInteger(v)&&v>=1&&v<=5)&&Number.isInteger(s.i)&&s.i>=0&&s.i<24)state={a:s.a,i:s.i,done:!!s.done&&s.a.every(Boolean)};}catch{}
 let storageOK=true;function save(){try{localStorage.setItem(key,JSON.stringify(state));}catch{storageOK=false;}}
 function show(html){app.innerHTML=html;window.scrollTo(0,0);const title=app.querySelector('h1');if(title){title.tabIndex=-1;title.focus({preventScroll:true});}}
